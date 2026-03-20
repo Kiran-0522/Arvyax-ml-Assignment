@@ -4,8 +4,6 @@
 
 This project builds an intelligent system that understands user emotional state and provides meaningful guidance. The system is designed to handle noisy, short, and imperfect real-world inputs.
 
----
-
 ##  Approach
 
 ### Emotional State Prediction (Part 1)
@@ -17,8 +15,6 @@ This project builds an intelligent system that understands user emotional state 
 
 * Treated as a **regression problem**
 * Model used: **XGBoost Regressor**
-
----
 
 ##  Decision Engine (Part 3)
 
@@ -39,16 +35,12 @@ The system uses a rule-based approach combining:
 
 This ensures the system provides **actionable and context-aware guidance**.
 
----
-
 ##  Uncertainty Modeling (Part 4)
 
 * **Confidence Score** = maximum predicted probability
 * **Uncertain Flag** = 1 if confidence < 0.6 else 0
 
 This helps the system avoid making overconfident incorrect decisions.
-
----
 
 ##  Feature Understanding (Part 5)
 
@@ -69,8 +61,6 @@ This helps the system avoid making overconfident incorrect decisions.
 
 Text provides emotional understanding, while metadata provides **contextual grounding**, making both essential.
 
----
-
 ##  Ablation Study (Part 6)
 
 Two models were compared:
@@ -88,8 +78,6 @@ Two models were compared:
 ### Result:
 
 Text + metadata model performs better as real-world emotions depend on both language and context.
-
----
 
 ##  Robustness (Part 9)
 
@@ -110,8 +98,6 @@ The system is designed to handle real-world challenges:
 * Example: calm text but high stress
 * System uses combined logic instead of relying on one feature
 
----
-
 ##  How to Run
 
 ```bash
@@ -119,9 +105,6 @@ pip install pandas numpy scikit-learn xgboost openpyxl scipy
 python train.py
 python predict.py
 ```
-
----
-
 ##  Output
 
 The system generates:
@@ -137,8 +120,6 @@ Columns:
 * uncertain_flag
 * what_to_do
 * when_to_do
-
----
 
 ##  Final Insight
 
